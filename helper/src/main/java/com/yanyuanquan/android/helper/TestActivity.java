@@ -30,13 +30,12 @@ public class TestActivity extends Activity {
         setContentView(R.layout.act);
         ButterKnife.setDebug(true);
         ButterKnife.bind(this);
-        Log.e("Buttterknife", "   title   " + textview);
+        Log.e("zjw", "   title   " + textview);
 
     }
 
     @OnClick(R2.id.textview)
-    boolean sayGetOffMe() {
+    void sayGetOffMe() {
         Toast.makeText(this, "Butterknife click active !", LENGTH_SHORT).show();
-        return true;
     }
 }
