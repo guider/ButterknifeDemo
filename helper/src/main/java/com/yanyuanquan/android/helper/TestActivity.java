@@ -3,6 +3,7 @@ package com.yanyuanquan.android.helper;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,7 @@ public class TestActivity extends Activity {
 
 
     @BindView(R2.id.textview)
-    TextView textview;
+    Button textview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +30,13 @@ public class TestActivity extends Activity {
         setContentView(R.layout.act);
         ButterKnife.setDebug(true);
         ButterKnife.bind(this);
-        Log.e("zjw", "   title   " + textview);
+        Log.e("Buttterknife", "   title   " + textview);
 
     }
 
     @OnClick(R2.id.textview)
     boolean sayGetOffMe() {
-        Toast.makeText(this, "Let go of me!", LENGTH_SHORT).show();
+        Toast.makeText(this, "Butterknife click active !", LENGTH_SHORT).show();
         return true;
     }
 }
